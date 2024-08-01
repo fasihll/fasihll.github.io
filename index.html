@@ -325,19 +325,19 @@
 
 						<ul class="clients-list has-scrollbar" style="align-items: center">
 							<li class="clients-item">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<img src="./assets/images/perusnia.png" style="width: 150px" alt="client logo" />
 								</a>
 							</li>
 
 							<li class="clients-item">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<img src="./assets/images/kitakita.png" style="width: 150px" alt="client logo" />
 								</a>
 							</li>
 
 							<li class="clients-item">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<img src="./assets/images/polije.png" style="width: 150px" alt="client logo" />
 								</a>
 							</li>
@@ -554,11 +554,22 @@
 							</ul>
 						</div>
 
+						<!-- Overlay Background -->
+						<div id="overlay" style="z-index: 98; display: none"></div>
+
+						<!-- Popup Container -->
+						<div id="popup" style="z-index: 99; display: none">
+							<span id="closeIcon" style="cursor: pointer; position: absolute; top: 10px; right: 10px; font-size: 20px; color: #fff">&times;</span>
+							<div class="video-container">
+								<iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+
 						<!-- andoird development -->
 
 						<ul class="project-list">
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#">
+								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=eAVK53mxDXU">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -573,7 +584,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#">
+								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=v23yhQ1AGIc">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -588,7 +599,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#">
+								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=rhSraBbFAsU">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -603,7 +614,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#">
+								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=aDa-c_SLh6E">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -618,7 +629,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#">
+								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=t73EqXWv5YA">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -633,7 +644,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#">
+								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=gdfZlpqftKc">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -651,7 +662,7 @@
 							<!-- web develpment -->
 
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#">
+								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=WPUE7ifR_38">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -666,7 +677,8 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#">
+								<!-- <a href="http://cdc.polije.ac.id/admin/login" id="itemView" x-data=""> -->
+								<a href="http://cdc.polije.ac.id/admin/login" target="_blank">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -681,7 +693,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#">
+								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=qVy2H_VwqVM">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -696,7 +708,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#">
+								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=OuOAjKoSpz4">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -711,7 +723,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -728,7 +740,7 @@
 
 							<!-- graphic design -->
 							<li class="project-item active" data-filter-item data-category="graphic design">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -743,7 +755,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="graphic design">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -758,7 +770,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="graphic design">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -773,7 +785,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="graphic design">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -788,7 +800,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="graphic design">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -803,7 +815,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="graphic design">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -820,7 +832,7 @@
 
 							<!-- quality Control -->
 							<li class="project-item active" data-filter-item data-category="quality control">
-								<a href="#">
+								<a href="#" id="itemView" x-data="">
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>

@@ -146,3 +146,38 @@ document.getElementById('sendMessageBtn').addEventListener('click', function () 
 
 	window.location.href = url;
 });
+
+let elements = document.querySelectorAll('#itemView');
+
+elements.forEach(function (element) {
+	element.addEventListener('click', function (event) {
+		event.preventDefault(); // Mencegah link default
+
+		// Ambil URL dari atribut x-data
+		let videoUrl = this.getAttribute('x-data');
+
+		// Konversi URL ke format embed
+		let videoId = videoUrl.split('v=')[1];
+		let embedUrl = `https://www.youtube.com/embed/${videoId}`;
+
+		// Set URL ke iframe
+		let videoFrame = document.getElementById('videoFrame');
+		videoFrame.src = embedUrl;
+
+		// Tampilkan overlay dan popup
+		document.getElementById('overlay').style.display = 'block';
+		document.getElementById('popup').style.display = 'block';
+	});
+});
+
+// Tutup popup saat klik ikon "X"
+document.getElementById('closeIcon').addEventListener('click', closePopup);
+
+// Tutup popup saat klik di luar popup
+document.getElementById('overlay').addEventListener('click', closePopup);
+
+function closePopup() {
+	document.getElementById('overlay').style.display = 'none';
+	document.getElementById('popup').style.display = 'none';
+	document.getElementById('videoFrame').src = ''; // Hentikan video saat popup ditutup
+}
