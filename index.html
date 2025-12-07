@@ -557,10 +557,29 @@
 						<div id="overlay" style="z-index: 98; display: none"></div>
 
 						<!-- Popup Container -->
-						<div id="popup" style="z-index: 99; display: none">
-							<span id="closeIcon" style="cursor: pointer; position: absolute; top: 10px; right: 10px; font-size: 20px; color: #fff">&times;</span>
-							<div class="video-container">
-								<iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+						<div id="popup" class="popup-box" style="z-index: 99; display: none">
+							<span id="closeIcon" class="popup-close-btn">&times;</span>
+
+							<div class="popup-content">
+								<div class="popup-left">
+									<div class="slider-wrapper">
+										<img id="popup-img" src="" alt="Portfolio Image" class="slider-image" />
+
+										<button id="prevBtn" class="slider-nav prev">
+											<ion-icon name="chevron-back-outline"></ion-icon>
+										</button>
+										<button id="nextBtn" class="slider-nav next">
+											<ion-icon name="chevron-forward-outline"></ion-icon>
+										</button>
+									</div>
+								</div>
+
+								<div class="popup-right">
+									<h3 id="popup-title" class="h3 popup-title">Project Title</h3>
+									<span id="popup-category" class="popup-category">Category</span>
+									<div class="separator"></div>
+									<p id="popup-desc" class="popup-text">Deskripsi detail project akan muncul di sini.</p>
+								</div>
 							</div>
 						</div>
 
@@ -568,12 +587,11 @@
 
 						<ul class="project-list">
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#" id="itemView" x-data="https://github.com/fasihll/task-app/releases/download/Frontend/app-release.apk">
+								<a href="#" class="portfolio-trigger" data-title="Task App" data-category="Mobile Development | Kotlin" data-description="Aplikasi manajemen tugas yang membantu pengguna mengatur produktivitas harian dengan fitur reminder dan kategori prioritas." data-images='["./assets/images/taskapp.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
 										</div>
-
 										<img src="./assets/images/taskapp.png" alt="finance" loading="lazy" />
 									</figure>
 
@@ -582,8 +600,9 @@
 									<p class="project-category">Mobile development</p>
 								</a>
 							</li>
+
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=eAVK53mxDXU">
+								<a href="#" class="portfolio-trigger" data-title="Github User App" data-category="Mobile Development | Kotlin" data-description="Aplikasi Monitoring Github User dengan fitur pencarian dan detail user dan clean architecture." data-images='["./assets/images/githubuser_mobile.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -597,8 +616,9 @@
 									<p class="project-category">Mobile development</p>
 								</a>
 							</li>
+
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=v23yhQ1AGIc">
+								<a href="#" class="portfolio-trigger" data-title="Culinaryndo App" data-category="Mobile Development | Kotlin" data-description="Sistem Deteksi Makanan Kuliner Tradisional dengan memanfaatkan Machine Learning/ Klasifikasi Gambar, dengan fitur ttracking penjual makanan terdekat memanfaatkan google api dan pastinya clean architecture." data-images='["./assets/images/culinaryndo_mobile.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -612,8 +632,9 @@
 									<p class="project-category">Mobile development</p>
 								</a>
 							</li>
+
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=rhSraBbFAsU">
+								<a href="#" class="portfolio-trigger" data-title="Story App" data-category="Mobile Development | Kotlin" data-description="Aplikasi Social Media untuk berbagi cerita pendek terintegrasi google api untuk menandai orang terdekat." data-images='["./assets/images/storyapp_mobile.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -627,8 +648,9 @@
 									<p class="project-category">Mobile development</p>
 								</a>
 							</li>
+
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=aDa-c_SLh6E">
+								<a href="#" class="portfolio-trigger" data-title="Book Library App" data-category="Mobile Development | Kotlin | Jetpack Compose" data-description="Aplikasi Baca Buku memanfaatkan api penyedia Buku menggunakan Kotlin Jetpack Compose." data-images='["./assets/images/FasihBook_mobile.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -642,8 +664,9 @@
 									<p class="project-category">Mobile development</p>
 								</a>
 							</li>
+
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=t73EqXWv5YA">
+								<a href="#" class="portfolio-trigger" data-title="KitaKita App" data-category="Mobile Development | Flutter" data-description="Aplikasi KitaKita digunakan untuk menjembatani pemesaanan layanan Agency menggunkaan flutter." data-images='["./assets/images/kitakita_mobile.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -657,8 +680,9 @@
 									<p class="project-category">Mobile development</p>
 								</a>
 							</li>
+
 							<li class="project-item active" data-filter-item data-category="mobile development">
-								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=gdfZlpqftKc">
+								<a href="#" class="portfolio-trigger" data-title="Perusnia App" data-category="Mobile Development | Kotlin" data-description="Aplikasi Mobile Perusnia digunakan untuk memudahkan penjualan buku yang di miliki oleh muesumm peruysnia tersebut dan terintegrasi payment gateway Midtrans" data-images='["./assets/images/perusnia_book.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -676,7 +700,7 @@
 							<!-- web develpment -->
 
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#" id="itemView" x-data="">
+								<a href="#" class="portfolio-trigger" data-title="Sistem Pendaftaran Siswa Baru" data-category="Web Development | Laravel | Tailwind CSS | PostgreSQL" data-description="Sistem Pendaftaran Siswa Baru dengan event pendaftaran dinamis dan jenjang dinamis, Fitur mulai dari pre-register, pendaftran, kelulusan hingga daftran ulang dan cetak berkas lainnnya. website ini dibangun dengan Laravel dan Livewire yang terintegrasi Whatsapp Gateway, Cloudflare" data-images='["./assets/images/spmb-al-furqan.png","./assets/images/spmb-al-furqan-1.png","./assets/images/spmb-al-furqan-2.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -692,7 +716,7 @@
 							</li>
 
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#" id="itemView" x-data="">
+								<a href="#" class="portfolio-trigger" data-title="Management SPP" data-category="Web Development | Laravel | Tailwind CSS | MySQL" data-description="Website Management SPP digunakan untuk mempermudah pelayanan pembayaran spp yang di bagung dengan laravel dan tailwind css" data-images='["./assets/images/mnaspp.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -708,7 +732,7 @@
 							</li>
 
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=vMyauGunFtU">
+								<a href="#" class="portfolio-trigger" data-title="SISTEM REKOMENDASI WISATA" data-category="Web Development | Laravel | Tailwind CSS | MySQL" data-description="Webiste dikembangkan menggunakan PHP dengan framework Laravel dan basis data MySQL. Hasil pengujian menunjukkan bahwa sistem rekomendasi mampu memberikan saran destinasi yang relevan dan akurat. Perhitungan AHP menghasilkan tingkat konsistensi sebesar 0.0173, yang menunjukkan bahwa penilaian sudah konsisten. Selain itu, melalui User Acceptance Testing (UAT), sistem memperoleh tingkat penerimaan pengguna sebesar 85%. Fitur yang tersedia meliputi Maps ke lokasi, Rating, Comment, dan Manajemen Data Wisata dan Manajemen Data Rekomendasi berdasrakan metode WP dan AHP." data-images='["./assets/images/sireta-1.png","./assets/images/sireta-2.png","./assets/images/sireta.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -724,7 +748,7 @@
 							</li>
 
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=WPUE7ifR_38">
+								<a href="#" class="portfolio-trigger" data-title="Dexagon QUIZ" data-category="Web Development | Laravel | Livewire | WebSocket | Tailwind CSS | MySQL" data-description="Aplikasi Quiz Realtime menggunakan Laravel, Livewire dan Tailwind CSS dan teknologi Relatime Websocket yaitu Laravel Reverb" data-images='["./assets/images/dexagon.png","./assets/images/dexagon-1.png","./assets/images/dexagon-2.png","./assets/images/dexagon-3.png","./assets/images/dexagon-4.png","./assets/images/dexagon-5.png","./assets/images/dexagon-6.png","./assets/images/dexagon-7.png","./assets/images/dexagon-8.png","./assets/images/dexagon-9.png","./assets/images/dexagon-10.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -740,7 +764,7 @@
 							</li>
 							<li class="project-item active" data-filter-item data-category="web development">
 								<!-- <a href="http://cdc.polije.ac.id/admin/login" id="itemView" x-data=""> -->
-								<a href="http://cdc.polije.ac.id/admin/login" target="_blank">
+								<a href="#" class="portfolio-trigger" data-title="Career Development and Counseling" data-category="Web Development | Laravel | Tailwind CSS" data-description="Website untuk manajemen dan Tracking Career mahasiswa Menggunakan laravel dan tailwind css" data-images='["./assets/images/cdc.png","./assets/images/cdc-1.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -755,7 +779,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=qVy2H_VwqVM">
+								<a href="#" class="portfolio-trigger" data-title="Kita Kita (Kreative Agency)" data-category="Web Development | Laravel | Tailwind CSS" data-description="Website Compnay profile sekaligun untuk menjembatani pemesaanan layanan Agency menggunkaan Laravel.." data-images='["./assets/images/kitakita_web.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -770,7 +794,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#" id="itemView" x-data="https://www.youtube.com/watch?v=OuOAjKoSpz4">
+								<a href="#" class="portfolio-trigger" data-title="Perusnia" data-category="Web Development | PHP | MySQL" data-description="Website Company profile Museum Persunia Sekaligus E-Commerce Book dan bisa baca buku secara online, terintegrassi Payment Gateway Midtrans" data-images='["./assets/images/perusnia_web.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
@@ -785,7 +809,7 @@
 								</a>
 							</li>
 							<li class="project-item active" data-filter-item data-category="web development">
-								<a href="#" id="itemView" x-data="">
+								<a href="#" class="portfolio-trigger" data-title="Polkah" data-category="Web Development | Laravel | Bootstrap" data-description="Website Company profile sekaligun untuk Point of Sale menggunaknan Laravel" data-images='["./assets/images/polkah.png"]'>
 									<figure class="project-img">
 										<div class="project-item-icon-box">
 											<ion-icon name="eye-outline"></ion-icon>
