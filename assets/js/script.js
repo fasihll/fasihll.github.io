@@ -276,3 +276,25 @@ function closePopup() {
 
 closeIcon.addEventListener('click', closePopup);
 popupOverlay.addEventListener('click', closePopup);
+
+// hitung umur berdasarkan tanggal lahir
+function calculateAge(birthDateString) {
+	const today = new Date();
+	const birthDate = new Date(birthDateString);
+
+	let age = today.getFullYear() - birthDate.getFullYear();
+	const monthDiff = today.getMonth() - birthDate.getMonth();
+
+	// Cek apakah ulang tahun sudah lewat atau belum tahun ini
+	if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+		age--;
+	}
+
+	return age;
+}
+
+const timeElement = document.getElementById('birthdate');
+const birthDate = timeElement.getAttribute('datetime');
+
+const age = calculateAge(birthDate);
+timeElement.textContent = age + ' Years';
